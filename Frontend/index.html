@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="marca">
+      <span class="logo">🛒</span>
+      <div>
+        <h1>TechStore</h1>
+        <p>Tienda electronica</p>
+      </div>
+    </div>
+    <div id="info-usuario" class="oculto">
+      <span id="bienvenida"></span>
+      <button id="btn-salir" class="boton-salir">Cerrar sesion</button>
+    </div>
+  </header>
+
+  <main id="login" class="tarjeta-login">
+    <div class="icono-login">🔐</div>
+    <h2>Bienvenido a TechStore</h2>
+    <p class="texto-suave centrado">Inicia sesion para ver la tienda</p>
+
+    <label class="campo">
+      Usuario
+      <input id="usuario" type="text" placeholder="Escribe tu usuario" autocomplete="username">
+    </label>
+
+    <label class="campo">
+      Contrasena
+      <input id="clave" type="password" placeholder="Escribe tu contrasena" autocomplete="current-password">
+    </label>
+
+    <label class="mostrar-clave">
+      <input id="mostrar-clave" type="checkbox">
+      Mostrar contrasena
+    </label>
+
+    <button id="btn-login" class="boton-principal">Entrar</button>
+    <p id="error-login" class="mensaje"></p>
+
+    <p class="texto-suave centrado">¿No tienes cuenta?</p>
+    <button id="btn-ir-registro" class="boton-secundario">Crear cuenta</button>
+  </main>
+
+  <main id="registro" class="tarjeta-login oculto">
+    <div class="icono-login">📝</div>
+    <h2>Crear cuenta</h2>
+    <p class="texto-suave centrado">Crea tu cuenta para entrar a la tienda electronica</p>
+
+    <label class="campo">
+      Usuario nuevo
+      <input id="nuevo-usuario" type="text" placeholder="Elige un usuario" autocomplete="off">
+    </label>
+
+    <label class="campo">
+      Contrasena
+      <input id="nueva-clave" type="password" placeholder="Minimo 6 caracteres" autocomplete="new-password">
+    </label>
+
+    <button id="btn-registrar" class="boton-principal">Registrarme</button>
+    <p id="error-registro" class="mensaje"></p>
+
+    <button id="btn-volver-login" class="boton-secundario">Ya tengo cuenta</button>
+  </main>
+
+  <main id="tienda" class="contenedor oculto">
+    <section class="catalogo">
+      <div class="barra">
+        <h2>Catalogo de productos</h2>
+        <input id="buscador" type="search" placeholder="Buscar producto...">
+      </div>
+      <div id="productos" class="rejilla"></div>
+      <p id="sin-resultados" class="texto-suave oculto">No hay productos que coincidan con la busqueda.</p>
+    </section>
+
+    <aside class="carrito">
+      <div class="carrito-encabezado">
+        <h2>Carrito</h2>
+        <span id="contador" class="contador">0</span>
+      </div>
+      <p id="carrito-vacio" class="texto-suave">El carrito esta vacio.</p>
+      <ul id="carrito-lista"></ul>
+      <div class="total">
+        <span>Total</span>
+        <strong id="total">$0</strong>
+      </div>
+      <button id="btn-pagar" class="boton-principal" disabled>Pagar</button>
+      <p id="mensaje-pago" class="mensaje"></p>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

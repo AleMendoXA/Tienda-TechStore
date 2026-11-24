@@ -1,0 +1,415 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --azul: #2563eb;
+  --azul-oscuro: #1d4ed8;
+  --rojo: #dc2626;
+  --verde: #166534;
+  --gris: #6b7280;
+  --fondo: #f3f4f6;
+  --texto: #111827;
+  --blanco: #ffffff;
+  --sombra: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+.oculto {
+  display: none !important;
+}
+
+
+.encabezado {
+  background: linear-gradient(90deg, #111827, #1f2937);
+  color: var(--blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px 24px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 36px;
+}
+
+.marca h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.marca p {
+  margin: 0;
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+#info-usuario {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#bienvenida {
+  color: #d1d5db;
+  font-size: 14px;
+}
+
+
+button {
+  font: inherit;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--azul);
+  color: var(--blanco);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--azul-oscuro);
+}
+
+button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.boton-principal {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.boton-secundario {
+  background: #e5e7eb;
+  color: var(--texto);
+  width: 100%;
+}
+
+.boton-secundario:hover {
+  background: #d1d5db;
+}
+
+.boton-salir {
+  background: transparent;
+  color: var(--blanco);
+  border: 1px solid #9ca3af;
+}
+
+.boton-salir:hover {
+  background: #374151;
+}
+
+.boton-agregar {
+  margin-top: 8px;
+}
+
+.boton-eliminar {
+  background: var(--rojo);
+  padding: 4px 10px;
+  font-size: 13px;
+  margin-left: auto;
+}
+
+.boton-eliminar:hover {
+  background: #b91c1c;
+}
+
+.control {
+  padding: 4px 12px;
+  background: #e5e7eb;
+  color: var(--texto);
+  font-weight: bold;
+}
+
+.control:hover {
+  background: #d1d5db;
+}
+
+/* Campos */
+input {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: var(--blanco);
+}
+
+input:focus {
+  outline: 2px solid var(--azul);
+  border-color: transparent;
+}
+
+
+.tarjeta-login {
+  background: var(--blanco);
+  max-width: 380px;
+  margin: 50px auto;
+  padding: 32px 28px;
+  border-radius: 16px;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.icono-login {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--azul);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.tarjeta-login h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #374151;
+}
+
+.campo input {
+  width: 100%;
+  font-weight: normal;
+}
+
+.mostrar-clave {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--gris);
+  cursor: pointer;
+}
+
+.mostrar-clave input {
+  width: auto;
+  margin: 0;
+}
+
+.mensaje {
+  margin: 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.mensaje:empty {
+  display: none;
+}
+
+.mensaje.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.mensaje.exito {
+  background: #dcfce7;
+  color: var(--verde);
+}
+
+.texto-suave {
+  color: var(--gris);
+  font-size: 14px;
+}
+
+.centrado {
+  text-align: center;
+  margin: 0;
+}
+
+/* Tienda */
+.contenedor {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.catalogo {
+  flex: 3;
+  min-width: 300px;
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.barra h2 {
+  margin: 0;
+}
+
+#buscador {
+  width: 280px;
+  max-width: 100%;
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.tarjeta-producto {
+  background: var(--blanco);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tarjeta-producto h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.descripcion {
+  color: var(--gris);
+  font-size: 14px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.precio {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--azul);
+  margin: 6px 0 0;
+}
+
+.stock {
+  font-size: 13px;
+  color: var(--gris);
+  margin: 0;
+}
+
+.stock-bajo {
+  color: #b45309;
+  font-weight: bold;
+}
+
+/* Carrito */
+.carrito {
+  flex: 1;
+  min-width: 260px;
+  background: var(--blanco);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 16px;
+}
+
+.carrito-encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carrito-encabezado h2 {
+  margin: 0;
+}
+
+.contador {
+  background: var(--azul);
+  color: var(--blanco);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#carrito-lista {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #e5e7eb;
+  padding-top: 12px;
+  font-size: 18px;
+}
+
+
+@media (max-width: 600px) {
+  .encabezado {
+    padding: 14px 16px;
+  }
+
+  .contenedor {
+    padding: 16px;
+  }
+
+  #buscador {
+    width: 100%;
+  }
+}
